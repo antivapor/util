@@ -57,7 +57,7 @@ func (s *Settings) SetParent(p SettingsInterface) {
 
 	if s.parent != nil {
 		ns := s.parent.Settings()
-		ns.AddOnChange(fmt.Sprintf("lime.child.%d", s.Id()), s.onChange)
+		ns.AddOnChange(fmt.Sprintf("lime.child.%d", s.Id()), s.onChange())
 	}
 }
 
